@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'SF Mono','Menlo','Consolas','Hiragino Kaku Gothic ProN',monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1019"/>
+      <stop offset="100%" stop-color="#1a1b2e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" rx="12" fill="url(#bg)"/>
+
+  <!-- Title bar -->
+  <rect width="800" height="36" rx="12" fill="#252640"/>
+  <rect y="12" width="800" height="24" fill="#252640"/>
+  <circle cx="18" cy="18" r="5.5" fill="#ff5f57"/>
+  <circle cx="36" cy="18" r="5.5" fill="#febc2e"/>
+  <circle cx="54" cy="18" r="5.5" fill="#28c840"/>
+  <text x="400" y="22" text-anchor="middle" fill="#8888aa" font-size="11" font-weight="600">AI Agent Architecture — Orchestrator Pattern</text>
+
+  <!-- Left: 3-Step Orchestration -->
+  <rect x="14" y="46" width="380" height="440" rx="8" fill="#1a1b30" stroke="#2d2e4a" stroke-width="1"/>
+  <text x="30" y="68" fill="#a78bfa" font-size="10" font-weight="700" letter-spacing="1.5">DESIGN METHODOLOGY</text>
+
+  <!-- Step 1 -->
+  <rect x="28" y="80" width="352" height="64" rx="6" fill="#262747" stroke="#3d3e6a" stroke-width="1"/>
+  <rect x="28" y="80" width="4" height="64" rx="2" fill="#6366f1"/>
+  <text x="44" y="98" fill="#a78bfa" font-size="9" font-weight="700" letter-spacing="1">STEP 1</text>
+  <text x="100" y="98" fill="#e2e8f0" font-size="12" font-weight="700">単体Worker</text>
+  <text x="44" y="114" fill="#8888aa" font-size="10">1体 x 1タスク x フロー型で確実に動く状態を作る</text>
+  <text x="44" y="132" fill="#6366f1" font-size="9">トリガー発火 / 品質安定 / エラー対応 / 人間に戻せる</text>
+
+  <!-- Arrow -->
+  <polygon points="200,148 204,156 196,156" fill="#6366f1"/>
+  <line x1="200" y1="144" x2="200" y2="156" stroke="#6366f1" stroke-width="1.5"/>
+
+  <!-- Step 2 -->
+  <rect x="28" y="160" width="352" height="64" rx="6" fill="#262747" stroke="#3d3e6a" stroke-width="1"/>
+  <rect x="28" y="160" width="4" height="64" rx="2" fill="#28c840"/>
+  <text x="44" y="178" fill="#28c840" font-size="9" font-weight="700" letter-spacing="1">STEP 2</text>
+  <text x="100" y="178" fill="#e2e8f0" font-size="12" font-weight="700">複数Worker + Human-in-the-Loop</text>
+  <text x="44" y="194" fill="#8888aa" font-size="10">人間が手動でつなぐ。受け渡しとレビューを明確化</text>
+  <text x="44" y="212" fill="#28c840" font-size="9">単体安定 / データ形式統一 / レビューポイント明確</text>
+
+  <!-- Arrow -->
+  <polygon points="200,228 204,236 196,236" fill="#28c840"/>
+  <line x1="200" y1="224" x2="200" y2="236" stroke="#28c840" stroke-width="1.5"/>
+
+  <!-- Step 3 -->
+  <rect x="28" y="240" width="352" height="64" rx="6" fill="#262747" stroke="#fbbf24" stroke-width="1.5"/>
+  <rect x="28" y="240" width="4" height="64" rx="2" fill="#fbbf24"/>
+  <text x="44" y="258" fill="#fbbf24" font-size="9" font-weight="700" letter-spacing="1">STEP 3</text>
+  <text x="100" y="258" fill="#e2e8f0" font-size="12" font-weight="700">Orchestrator導入</text>
+  <text x="44" y="274" fill="#8888aa" font-size="10">AIがつなぐ — Planner / Router / Judge</text>
+  <text x="44" y="292" fill="#fbbf24" font-size="9">タスク分解 / 振り分け / 評価 / 次の判断</text>
+
+  <!-- Design order -->
+  <text x="30" y="328" fill="#a78bfa" font-size="10" font-weight="700" letter-spacing="1.5">AGENT DESIGN ORDER</text>
+  <rect x="28" y="338" width="352" height="134" rx="6" fill="#1e1f35" stroke="#2d2e4a" stroke-width="1"/>
+
+  <text x="44" y="360" fill="#6366f1" font-size="10" font-weight="700">1</text>
+  <text x="60" y="360" fill="#c8c8e0" font-size="11">Goal / Policy — 目的と方針の定義</text>
+  <text x="44" y="380" fill="#6366f1" font-size="10" font-weight="700">2</text>
+  <text x="60" y="380" fill="#c8c8e0" font-size="11">Data / Memory — RAG・ナレッジ基盤構築</text>
+  <text x="44" y="400" fill="#6366f1" font-size="10" font-weight="700">3</text>
+  <text x="60" y="400" fill="#c8c8e0" font-size="11">Functional Agent — 単機能エージェント実装</text>
+  <text x="44" y="420" fill="#6366f1" font-size="10" font-weight="700">4</text>
+  <text x="60" y="420" fill="#c8c8e0" font-size="11">Orchestrator — 統合・判断・ルーティング</text>
+  <text x="44" y="440" fill="#6366f1" font-size="10" font-weight="700">5</text>
+  <text x="60" y="440" fill="#c8c8e0" font-size="11">Domain Skill + Tool接続 — 業務特化スキル</text>
+  <text x="44" y="460" fill="#6366f1" font-size="10" font-weight="700">6</text>
+  <text x="60" y="460" fill="#c8c8e0" font-size="11">Reflection Loop — 自己修正・品質改善</text>
+
+  <!-- Right: Live system diagram -->
+  <rect x="406" y="46" width="380" height="440" rx="8" fill="#1a1b30" stroke="#2d2e4a" stroke-width="1"/>
+  <text x="422" y="68" fill="#a78bfa" font-size="10" font-weight="700" letter-spacing="1.5">LIVE SYSTEM — AI BPaaS</text>
+
+  <!-- Orchestrator node -->
+  <rect x="490" y="82" width="220" height="44" rx="22" fill="#3730a3" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="600" y="100" text-anchor="middle" fill="#fff" font-size="10" font-weight="700" letter-spacing="1">ORCHESTRATOR</text>
+  <text x="600" y="116" text-anchor="middle" fill="#c7d2fe" font-size="9">Planner / Router / Judge</text>
+
+  <!-- Lines from orchestrator to workers -->
+  <line x1="540" y1="126" x2="470" y2="150" stroke="#6366f1" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="600" y1="126" x2="600" y2="150" stroke="#6366f1" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="660" y1="126" x2="730" y2="150" stroke="#6366f1" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Worker 1 -->
+  <rect x="420" y="150" width="100" height="58" rx="6" fill="#262747" stroke="#3d3e6a" stroke-width="1"/>
+  <circle cx="438" cy="166" r="7" fill="#6366f1"/>
+  <text x="438" y="170" text-anchor="middle" fill="#fff" font-size="8" font-weight="700">W1</text>
+  <text x="470" y="170" fill="#c8c8e0" font-size="9" font-weight="600">請求書AI</text>
+  <text x="432" y="186" fill="#8888aa" font-size="8">OCR読取→仕訳</text>
+  <text x="432" y="198" fill="#8888aa" font-size="8">→自動起票</text>
+
+  <!-- Worker 2 -->
+  <rect x="546" y="150" width="108" height="58" rx="6" fill="#262747" stroke="#3d3e6a" stroke-width="1"/>
+  <circle cx="564" cy="166" r="7" fill="#28c840"/>
+  <text x="564" y="170" text-anchor="middle" fill="#fff" font-size="8" font-weight="700">W2</text>
+  <text x="596" y="170" fill="#c8c8e0" font-size="9" font-weight="600">議事録Agent</text>
+  <text x="558" y="186" fill="#8888aa" font-size="8">録音→文字起こし</text>
+  <text x="558" y="198" fill="#8888aa" font-size="8">→要約→Action抽出</text>
+
+  <!-- Worker 3 -->
+  <rect x="680" y="150" width="94" height="58" rx="6" fill="#262747" stroke="#3d3e6a" stroke-width="1"/>
+  <circle cx="698" cy="166" r="7" fill="#fbbf24"/>
+  <text x="698" y="170" text-anchor="middle" fill="#1a1b2e" font-size="8" font-weight="700">W3</text>
+  <text x="727" y="170" fill="#c8c8e0" font-size="9" font-weight="600">AI社長</text>
+  <text x="692" y="186" fill="#8888aa" font-size="8">RAG+経営判断</text>
+  <text x="692" y="198" fill="#8888aa" font-size="8">→意思決定支援</text>
+
+  <!-- HIL Review -->
+  <rect x="420" y="228" width="354" height="40" rx="6" fill="#1e2a1e" stroke="#28c840" stroke-width="1"/>
+  <text x="440" y="244" fill="#28c840" font-size="9" font-weight="700" letter-spacing="1">HUMAN-IN-THE-LOOP</text>
+  <text x="440" y="260" fill="#86efac" font-size="9">人は「例外判断」と「最終承認」のみ。作業の80%はAIが自律実行</text>
+
+  <!-- Tool connections -->
+  <text x="422" y="290" fill="#a78bfa" font-size="10" font-weight="700" letter-spacing="1.5">TOOL CONNECTIONS</text>
+
+  <rect x="420" y="300" width="108" height="36" rx="6" fill="#262747" stroke="#3d3e6a" stroke-width="1"/>
+  <text x="474" y="323" text-anchor="middle" fill="#c8c8e0" font-size="10">Claude API</text>
+
+  <rect x="540" y="300" width="108" height="36" rx="6" fill="#262747" stroke="#3d3e6a" stroke-width="1"/>
+  <text x="594" y="323" text-anchor="middle" fill="#c8c8e0" font-size="10">Google Workspace</text>
+
+  <rect x="660" y="300" width="108" height="36" rx="6" fill="#262747" stroke="#3d3e6a" stroke-width="1"/>
+  <text x="714" y="323" text-anchor="middle" fill="#c8c8e0" font-size="10">Slack / Chat</text>
+
+  <rect x="420" y="346" width="108" height="36" rx="6" fill="#262747" stroke="#3d3e6a" stroke-width="1"/>
+  <text x="474" y="369" text-anchor="middle" fill="#c8c8e0" font-size="10">n8n</text>
+
+  <rect x="540" y="346" width="108" height="36" rx="6" fill="#262747" stroke="#3d3e6a" stroke-width="1"/>
+  <text x="594" y="369" text-anchor="middle" fill="#c8c8e0" font-size="10">Vector DB</text>
+
+  <rect x="660" y="346" width="108" height="36" rx="6" fill="#262747" stroke="#3d3e6a" stroke-width="1"/>
+  <text x="714" y="369" text-anchor="middle" fill="#c8c8e0" font-size="10">SaaS API</text>
+
+  <!-- RAG section -->
+  <text x="422" y="406" fill="#a78bfa" font-size="10" font-weight="700" letter-spacing="1.5">RAG / KNOWLEDGE BASE</text>
+  <rect x="420" y="414" width="354" height="60" rx="6" fill="#1e1f35" stroke="#2d2e4a" stroke-width="1"/>
+  <text x="436" y="434" fill="#c8c8e0" font-size="10">Hybrid Search: キーワード + セマンティック検索</text>
+  <text x="436" y="450" fill="#c8c8e0" font-size="10">チャンク設計: 意味のある最小単位 + メタデータ付与</text>
+  <text x="436" y="466" fill="#8888aa" font-size="9">議事録 / 契約書 / 業務マニュアル / 商談履歴 → ベクトルDB</text>
+</svg>

@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>内村尚城 | 就活ポートフォリオ</title>
+  <meta name="description" content="内村尚城の就職活動用ポートフォリオ。AI活用、業務自動化、営業戦略、業務設計の実績をまとめています。">
+  <style>
+    :root {
+      --ink: #18212f;
+      --muted: #5f6c7b;
+      --line: #d9e0e7;
+      --paper: #ffffff;
+      --soft: #f4f7f9;
+      --green: #1d8a72;
+      --blue: #1768a8;
+      --coral: #df684a;
+      --yellow: #d6a336;
+      --shadow: 0 18px 48px rgba(24, 33, 47, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-nav {
+      position: fixed;
+      z-index: 20;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px 34px;
+      background: rgba(255, 255, 255, 0.86);
+      border-bottom: 1px solid rgba(217, 224, 231, 0.72);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .nav-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+
+    .hero {
+      min-height: 72vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 118px 34px 58px;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(14, 27, 38, 0.92) 0%, rgba(14, 27, 38, 0.76) 48%, rgba(14, 27, 38, 0.36) 100%),
+        url("assets/ops-workflow.png") center / cover no-repeat;
+    }
+
+    .hero-inner {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: #a9d9cc;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 48px;
+      line-height: 1.14;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .hero-lead {
+      max-width: 760px;
+      margin: 22px 0 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 20px;
+      line-height: 1.85;
+      font-weight: 700;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      margin: 14px 0 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 15px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .button.primary {
+      background: var(--green);
+      border-color: var(--green);
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .section {
+      padding: 78px 34px;
+    }
+
+    .section.alt {
+      background: var(--soft);
+    }
+
+    .section-inner {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .section-desc {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .summary-panel {
+      padding: 8px 0 8px 26px;
+      border-left: 5px solid var(--green);
+    }
+
+    .summary-panel h3,
+    .strength h3,
+    .project-copy h3,
+    .timeline-item h3,
+    .contact h2 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    .summary-panel p {
+      margin: 14px 0 0;
+      color: var(--muted);
+    }
+
+    .signal-list {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .signal-list li {
+      padding: 16px 18px;
+      border-left: 4px solid var(--green);
+      background: #f8fbfa;
+      border-radius: 0 8px 8px 0;
+      color: #334155;
+      font-weight: 700;
+    }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .metric {
+      padding: 16px;
+      border: 1px solid #cfd8e1;
+      border-radius: 8px;
+      background: #fbfcfd;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--ink);
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .strength-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .strength {
+      min-height: 240px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .strength-mark {
+      width: 42px;
+      height: 8px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      background: var(--green);
+    }
+
+    .strength:nth-child(2) .strength-mark {
+      background: var(--blue);
+    }
+
+    .strength:nth-child(3) .strength-mark {
+      background: var(--coral);
+    }
+
+    .strength p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .project-list {
+      display: grid;
+      gap: 24px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
+      gap: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      box-shadow: 0 12px 36px rgba(24, 33, 47, 0.08);
+    }
+
+    .project-media {
+      min-height: 340px;
+      background: #edf2f6;
+    }
+
+    .project-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .project-media.contain img {
+      object-fit: contain;
+      padding: 22px;
+    }
+
+    .project-media.split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+    }
+
+    .project-media.split img {
+      object-fit: cover;
+      background: #edf2f6;
+    }
+
+    .project-copy {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-type {
+      margin-bottom: 8px;
+      color: var(--coral);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .project-copy p {
+      margin: 14px 0 0;
+      color: var(--muted);
+    }
+
+    .project-points {
+      display: grid;
+      gap: 9px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      color: #324255;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .project-points li {
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .project-points li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.82em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+      color: #435162;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .skill-table {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--line);
+    }
+
+    .skill-cell {
+      min-height: 220px;
+      padding: 24px;
+      background: var(--paper);
+    }
+
+    .skill-cell h3 {
+      margin: 0 0 14px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    .skill-cell ul {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .timeline-item {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+    }
+
+    .timeline-label {
+      display: inline-flex;
+      margin-bottom: 14px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .timeline-item p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .narrative {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .narrative-logo {
+      display: grid;
+      place-items: center;
+      min-height: 340px;
+      border-radius: 8px;
+      background: #eaf4ef;
+      border: 1px solid #cde2d8;
+    }
+
+    .narrative-logo img {
+      width: 170px;
+      filter: drop-shadow(0 16px 28px rgba(24, 33, 47, 0.18));
+    }
+
+    .narrative-copy {
+      padding: 8px 0;
+    }
+
+    .narrative-copy p {
+      margin: 18px 0 0;
+      color: var(--muted);
+    }
+
+    .contact {
+      padding: 58px 34px;
+      color: #fff;
+      background: #17201f;
+    }
+
+    .contact-inner {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .contact p {
+      margin: 12px 0 0;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      background: var(--yellow);
+      color: #17201f;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .footer-note {
+      width: min(1120px, 100%);
+      margin: 26px auto 0;
+      color: rgba(255, 255, 255, 0.48);
+      font-size: 12px;
+    }
+
+    @media (max-width: 920px) {
+      .site-nav {
+        position: static;
+        padding: 14px 18px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 76vh;
+        padding: 74px 22px 46px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero-lead {
+        font-size: 18px;
+      }
+
+      .section {
+        padding: 58px 22px;
+      }
+
+      .section-head,
+      .summary-grid,
+      .narrative,
+      .contact-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .strength-grid,
+      .timeline,
+      .skill-table {
+        grid-template-columns: 1fr;
+      }
+
+      .project {
+        grid-template-columns: 1fr;
+      }
+
+      .project-media {
+        min-height: 260px;
+      }
+
+      .project-media.split {
+        grid-template-columns: 1fr;
+        min-height: 420px;
+      }
+
+      .metric-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .crop-right {
+      overflow: hidden;
+      background: #edf2f6;
+    }
+
+    .crop-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 100% center;
+    }
+
+    @media print {
+      .site-nav,
+      .hero-actions,
+      .contact-link {
+        display: none;
+      }
+
+      body {
+        background: #fff;
+        color: #111;
+      }
+
+      .hero,
+      .contact {
+        color: #111;
+        background: #fff;
+      }
+
+      .section {
+        padding: 34px 0;
+      }
+
+      .section-inner,
+      .hero-inner,
+      .contact-inner,
+      .footer-note {
+        width: 100%;
+      }
+
+      .project,
+      .strength,
+      .timeline-item {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="ページ内ナビゲーション">
+    <a class="nav-brand" href="#top" aria-label="トップへ戻る">
+      <span class="nav-mark" aria-hidden="true"></span>
+      <span>Naoki Uchimura</span>
+    </a>
+    <div class="nav-links">
+      <a href="#summary">Summary</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <p class="eyebrow">Job Hunting Portfolio 2026</p>
+      <h1>内村 尚城<br>Naoki Uchimura</h1>
+      <p class="hero-lead">AI活用・業務自動化・営業戦略を、現場で動く仕組みに落とし込む。</p>
+      <p class="hero-copy">構想だけで終わらせず、業務フローの分解、ツール選定、実装、運用ルール、提案資料化まで一気通貫で進めることを強みにしています。</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#projects">実績を見る</a>
+        <a class="button" href="mailto:naoki.uch0325@gmail.com">メールする</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="summary">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Summary</p>
+            <h2>自己紹介</h2>
+          </div>
+          <p class="section-desc">AIツールを触れるだけではなく、実際の業務・営業・意思決定の中に組み込む経験を積んできました。大きな組織でも小さなチームでも、曖昧な課題を構造化して前に進めます。</p>
+        </div>
+
+        <div class="summary-grid">
+          <div class="summary-panel">
+            <h3>人物像</h3>
+            <p>現場の困りごとを聞き、業務の流れに分解し、AI・n8n・Google Workspace・Slack・Notionなどを組み合わせて改善案と実装に落とし込むタイプです。営業・提案・資料作成も含め、事業側と技術側の間に立つ役割を得意としています。</p>
+            <div class="metric-grid" aria-label="経験サマリー">
+              <div class="metric">
+                <strong>AI</strong>
+                <span>生成AI活用 / エージェント設計</span>
+              </div>
+              <div class="metric">
+                <strong>Ops</strong>
+                <span>業務自動化 / API連携</span>
+              </div>
+              <div class="metric">
+                <strong>Biz</strong>
+                <span>営業戦略 / 提案 / CSO補佐</span>
+              </div>
+            </div>
+          </div>
+
+          <ul class="signal-list">
+            <li>AI導入を「何となく使う」から「毎日の業務で回る」状態へ設計する。</li>
+            <li>営業・採用・レポート・資料作成など、非エンジニア業務の自動化に強い。</li>
+            <li>過去の試行錯誤を、自己修正力と実務での行動量に変えてきた。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Strengths</p>
+            <h2>強み</h2>
+          </div>
+          <p class="section-desc">就職後に価値を出しやすい領域を、業務設計・実装・ビジネス推進の3つに整理しています。</p>
+        </div>
+
+        <div class="strength-grid">
+          <article class="strength">
+            <div class="strength-mark" aria-hidden="true"></div>
+            <h3>業務を構造化する力</h3>
+            <p>ヒアリング内容を、入力・処理・判断・出力・例外対応に分け、どこを人が担い、どこをAIや自動化に任せるべきかを整理します。</p>
+          </article>
+          <article class="strength">
+            <div class="strength-mark" aria-hidden="true"></div>
+            <h3>実装まで持っていく力</h3>
+            <p>n8n、GAS、API、Google Workspace、Slackなどを使い、提案で終わらず動くワークフローや社内ツールとして形にします。</p>
+          </article>
+          <article class="strength">
+            <div class="strength-mark" aria-hidden="true"></div>
+            <h3>事業目線で伝える力</h3>
+            <p>コスト削減、営業生産性、運用定着、意思決定の速さなど、経営・現場双方に伝わる言葉で資料化し、関係者を動かします。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Projects</p>
+            <h2>主な実績</h2>
+          </div>
+          <p class="section-desc">公開・提出しやすいように、社名や機密情報は出しすぎず、役割・課題・成果が伝わる形でまとめています。</p>
+        </div>
+
+        <div class="project-list">
+          <article class="project">
+            <div class="project-media contain">
+              <img src="assets/automation-workflow.png" alt="n8nで構築した広告運用・分析自動化ワークフローの画面">
+            </div>
+            <div class="project-copy">
+              <div class="project-type">Automation / n8n</div>
+              <h3>広告・分析業務の自動化ワークフロー</h3>
+              <p>Google Sheets、Slack、AI APIを連携し、定期実行、レポート生成、関係者への通知までを自動化する業務フローを設計しました。</p>
+              <ul class="project-points">
+                <li>手作業の確認・転記・通知をワークフロー化</li>
+                <li>例外時の通知やログ確認を前提にした運用設計</li>
+                <li>現場担当者が使い続けられる粒度に分解</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">n8n</span>
+                <span class="tag">Google Sheets</span>
+                <span class="tag">Slack</span>
+                <span class="tag">AI API</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media split">
+              <div class="crop-right">
+                <img src="assets/ai-report-form.png" alt="AIレポート生成フォームの画面">
+              </div>
+              <img src="assets/ai-report-output.png" alt="AIレポート出力画面">
+            </div>
+            <div class="project-copy">
+              <div class="project-type">AI Tool / HR Ops</div>
+              <h3>採用・人事レポート生成AI</h3>
+              <p>求人情報、ターゲット、予算、採用課題などを入力すると、提案・分析レポートのたたき台を生成する社内向けツールを設計しました。</p>
+              <ul class="project-points">
+                <li>曖昧な採用要件を構造化して入力項目に変換</li>
+                <li>レポート作成の初速を上げ、担当者の判断時間を確保</li>
+                <li>実務で使える粒度のアウトプット形式に調整</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">生成AI</span>
+                <span class="tag">業務設計</span>
+                <span class="tag">レポート自動化</span>
+                <span class="tag">Vercel</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media">
+              <img src="assets/line-tool-ui.png" alt="バナー自動生成AIアプリのUI画面">
+            </div>
+            <div class="project-copy">
+              <div class="project-type">AI Tool / LINE Creative</div>
+              <h3>バナー自動生成AIアプリ</h3>
+              <p>商品情報・ターゲット・訴求内容を入力するだけで、LINE広告用バナー画像を自動生成するWebアプリを設計・実装しました。デザイナー不在でも広告クリエイティブを量産できる仕組みです。</p>
+              <ul class="project-points">
+                <li>ターゲット属性と訴求軸からAIがバナー構成を自動決定</li>
+                <li>人物モデル・背景・コピーの組み合わせを複数パターン生成</li>
+                <li>バナー制作の工数を1枚あたり数十分→数秒に短縮</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">GPT Image</span>
+                <span class="tag">LINE広告</span>
+                <span class="tag">Next.js / Vercel</span>
+                <span class="tag">n8n</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media contain">
+              <img src="assets/ai-agent-terminal.svg" alt="AIエージェントのOrchestratorアーキテクチャ図">
+            </div>
+            <div class="project-copy">
+              <div class="project-type">AI Agent / Orchestrator Design</div>
+              <h3>AIエージェント設計・業務プロセス自律化</h3>
+              <p>業務プロセスを「丸ごとAIに引き受けさせる」設計を行っています。単体Workerの安定稼働から、Human-in-the-Loopによる品質担保、最終的にOrchestratorがタスク分解・振り分け・評価まで自律判断する3段階のアーキテクチャで構築。</p>
+              <ul class="project-points">
+                <li>経営者の意思決定をRAG（ハイブリッド検索＋メタデータ設計）で再現する「AI社長」エージェントを構築。議事録・商談履歴・経営方針をナレッジ化し、社員がチャットで経営判断を即時確認可能に</li>
+                <li>請求書処理・議事録生成・レポート作成など、人が作業の80%を占めていた業務をAIが自律実行し、人は例外判断と最終承認のみに集中する構造へ再設計</li>
+                <li>Claude Code / OpenClawをエージェント基盤として採用し、Goal定義→Data/Memory設計→機能Agent実装→Orchestrator統合→Reflection Loopの設計順序で段階的に展開</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">OpenClaw</span>
+                <span class="tag">Claude Code</span>
+                <span class="tag">Claude API</span>
+                <span class="tag">RAG</span>
+                <span class="tag">n8n</span>
+                <span class="tag">Orchestrator</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media contain">
+              <img src="assets/ops-workflow.png" alt="議事録・音声・Google Drive・Slackを連携する自動化ワークフローの画面">
+            </div>
+            <div class="project-copy">
+              <div class="project-type">Operations / Workflow Design</div>
+              <h3>会議・資料・通知の自動化基盤</h3>
+              <p>音声、議事録、Google Drive、Slack通知をつなぎ、情報整理やタスク抽出を自動化するフローを設計。人が判断に集中できる状態を目指しました。</p>
+              <ul class="project-points">
+                <li>複数ツールに散らばる情報をひとつの流れに統合</li>
+                <li>完了判定、保存、通知までを一連の業務に設計</li>
+                <li>現場の運用負荷を減らすための例外処理を組み込み</li>
+              </ul>
+              <div class="tags">
+                <span class="tag">Google Drive</span>
+                <span class="tag">Slack</span>
+                <span class="tag">Speech-to-Text</span>
+                <span class="tag">業務改善</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="skills">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Skills</p>
+            <h2>できること</h2>
+          </div>
+          <p class="section-desc">エンジニアリングだけ、営業だけに閉じず、事業課題から運用までつなげて考えるためのスキルセットです。</p>
+        </div>
+
+        <div class="skill-table">
+          <div class="skill-cell">
+            <h3>AI / Automation</h3>
+            <ul>
+              <li>生成AI活用設計</li>
+              <li>AIエージェント導入支援</li>
+              <li>n8nワークフロー構築</li>
+              <li>GAS / API連携</li>
+            </ul>
+          </div>
+          <div class="skill-cell">
+            <h3>Business Design</h3>
+            <ul>
+              <li>業務フロー整理</li>
+              <li>要件定義</li>
+              <li>提案書作成</li>
+              <li>ROI / 削減工数の整理</li>
+            </ul>
+          </div>
+          <div class="skill-cell">
+            <h3>Sales / Strategy</h3>
+            <ul>
+              <li>営業パイプライン管理</li>
+              <li>ABMターゲティング</li>
+              <li>アカウントプラン</li>
+              <li>営業会議・週次報告設計</li>
+            </ul>
+          </div>
+          <div class="skill-cell">
+            <h3>Tools</h3>
+            <ul>
+              <li>Google Workspace</li>
+              <li>Slack / Notion</li>
+              <li>Claude / ChatGPT / Gemini</li>
+              <li>JavaScript / Node.js</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Work Process</p>
+            <h2>仕事の進め方</h2>
+          </div>
+          <p class="section-desc">新しい職場でも再現できるよう、成果物より前の考え方も明示しています。</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-label">01</span>
+            <h3>現場を聞く</h3>
+            <p>困っている作業、判断が必要な箇所、例外が起きる場面を聞き、業務を流れで捉えます。</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-label">02</span>
+            <h3>小さく動かす</h3>
+            <p>いきなり大きく作らず、最初に価値が出る範囲を決めてプロトタイプ化します。</p>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-label">03</span>
+            <h3>運用にする</h3>
+            <p>通知、ログ、権限、例外対応、引き継ぎまで整え、使われ続ける仕組みにします。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="section-inner">
+        <div class="narrative">
+          <div class="narrative-logo">
+            <img src="assets/bms-logo.png" alt="Book Mark Studioのロゴ">
+          </div>
+          <div class="narrative-copy">
+            <p class="section-kicker">Narrative</p>
+            <h2>AIを「使う」のではなく、業務プロセスごとAIで再設計するのが強みです。</h2>
+            <p>ツール導入で終わる支援はしません。業務フローを分解し、AIが自律実行できる部分と人が判断すべき部分を切り分け、Orchestrator設計で全体を統合する。作業の80%をAIに任せ、人は意思決定に集中できる状態を作るのが自分の仕事です。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact" id="contact">
+    <div class="contact-inner">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>内村 尚城 / Naoki Uchimura</h2>
+        <p>AI活用、業務自動化、営業・事業開発領域で、現場と実装の間に立つ役割を志望しています。</p>
+      </div>
+      <a class="contact-link" href="mailto:naoki.uch0325@gmail.com">naoki.uch0325@gmail.com</a>
+    </div>
+    <div class="footer-note">Portfolio for job hunting. Last updated: 2026-05-25</div>
+  </footer>
+</body>
+</html>

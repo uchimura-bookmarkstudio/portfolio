@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIコンサルタント実績資料 – 新谷悠悟</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'YuGothic', sans-serif;
+      background: #f5f6f8;
+      color: #1a1a2e;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      box-shadow: 0 4px 32px rgba(0,0,0,.12);
+    }
+
+    /* ── Header ── */
+    .header {
+      background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+      color: #fff;
+      padding: 48px 56px 40px;
+    }
+    .header-label {
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #7eb8f7;
+      margin-bottom: 10px;
+    }
+    .header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      margin-bottom: 6px;
+    }
+    .header h1 span {
+      font-size: 15px;
+      font-weight: 400;
+      color: #a8c6e8;
+      margin-left: 10px;
+    }
+    .header-sub {
+      font-size: 13px;
+      color: #a8c6e8;
+      margin-top: 4px;
+    }
+    .header-meta {
+      display: flex;
+      gap: 32px;
+      margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .header-meta-item { display: flex; flex-direction: column; gap: 3px; }
+    .header-meta-item .label {
+      font-size: 10px;
+      letter-spacing: .12em;
+      color: #7eb8f7;
+      text-transform: uppercase;
+    }
+    .header-meta-item .value {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* ── Main ── */
+    .content { padding: 48px 56px 56px; }
+    .section { margin-bottom: 48px; }
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      color: #0f3460;
+      border-bottom: 3px solid #0f3460;
+      padding-bottom: 12px;
+      margin-bottom: 28px;
+    }
+
+    /* ── Summary ── */
+    .summary-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: #333;
+      background: #f0f4ff;
+      border-left: 4px solid #0f3460;
+      padding: 18px 22px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    /* ── Skills ── */
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-tag {
+      background: #0f3460;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 20px;
+    }
+    .skill-tag.secondary {
+      background: #e8eef8;
+      color: #0f3460;
+    }
+
+    /* ── Section note ── */
+    .section-note {
+      font-size: 12px;
+      color: #888;
+      background: #fafafa;
+      border: 1px dashed #d0d8e8;
+      border-radius: 6px;
+      padding: 10px 16px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-note::before { content: '📌'; font-size: 13px; }
+
+    /* ── Achievement card ── */
+    .achievement-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 28px 30px;
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+    .achievement-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(180deg, #0f3460, #3a86ff);
+    }
+
+    .card-header {
+      margin-bottom: 6px;
+    }
+    .card-header-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+    .card-company {
+      font-size: 17px;
+      font-weight: 700;
+      color: #0f3460;
+    }
+    .card-category {
+      font-size: 11px;
+      font-weight: 600;
+      background: #e8f4fd;
+      color: #1565c0;
+      padding: 4px 12px;
+      border-radius: 12px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    /* Mission statement – the "what changed" headline */
+    .card-mission {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin: 10px 0 16px;
+      line-height: 1.5;
+      padding: 10px 14px;
+      background: #f7f9fc;
+      border-radius: 6px;
+      border-left: 3px solid #3a86ff;
+    }
+
+    .card-body { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .card-block-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 6px;
+    }
+    .card-block-text {
+      font-size: 13.5px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .tools-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+    .tool-badge {
+      background: #f1f5f9;
+      color: #475569;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+    }
+
+    /* ── Effect box ── */
+    .effects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .effect-box {
+      border-radius: 8px;
+      padding: 14px 18px;
+    }
+    .effect-box.quant {
+      background: linear-gradient(90deg, #f0f9ff, #e8f4fd);
+      border: 1px solid #bde0fe;
+    }
+    .effect-box.qual {
+      background: linear-gradient(90deg, #f0fff4, #e6f7ee);
+      border: 1px solid #b7e4c7;
+    }
+    .effect-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .effect-box.quant .effect-label { color: #1565c0; }
+    .effect-box.qual .effect-label { color: #2d6a4f; }
+    .effect-number {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f3460;
+      line-height: 1.2;
+      margin-bottom: 3px;
+    }
+    .effect-headline {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a5c38;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+    .effect-text {
+      font-size: 12.5px;
+      color: #444;
+      line-height: 1.65;
+    }
+
+    /* ── Screenshot gallery ── */
+    .screenshots {
+      margin-top: 22px;
+      border-top: 1px solid #e8eef8;
+      padding-top: 18px;
+    }
+    .screenshots-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 12px;
+    }
+    .screenshots-grid { display: grid; gap: 12px; }
+    .screenshots-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+    .screenshots-grid.cols-1 { grid-template-columns: 1fr; }
+
+    .screenshot-item {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      cursor: pointer;
+    }
+    .screenshot-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform .3s ease;
+    }
+    .screenshot-item:hover img { transform: scale(1.02); }
+    .screenshot-item.fixed-h img {
+      height: 220px;
+      object-fit: cover;
+      object-position: top;
+    }
+    .screenshot-caption {
+      font-size: 11px;
+      color: #666;
+      text-align: center;
+      padding: 6px 8px;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    /* ── Lightbox ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.85);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 95vw;
+      max-height: 90vh;
+      border-radius: 6px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.5);
+    }
+    .lightbox-close {
+      position: fixed;
+      top: 20px; right: 28px;
+      color: #fff;
+      font-size: 36px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* ── Strengths ── */
+    .strengths-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .strength-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px 22px;
+    }
+    .strength-icon-wrap {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    .strength-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f3460;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .strength-text { font-size: 12.5px; color: #555; line-height: 1.75; }
+
+    /* ── Footer ── */
+    .footer {
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      padding: 20px 56px;
+      text-align: right;
+      font-size: 11px;
+      color: #999;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; max-width: 100%; }
+      .lightbox { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<div class="page">
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header-label">AI Consultant Portfolio</div>
+    <h1>新谷 悠悟 <span>Yugo Shintani</span></h1>
+    <div class="header-sub">AIコンサルタント ／ DX推進エンジニア</div>
+    <div class="header-meta">
+      <div class="header-meta-item">
+        <span class="label">経験年数</span>
+        <span class="value">2年</span>
+      </div>
+      <div class="header-meta-item">
+        <span class="label">得意領域</span>
+        <span class="value">生成AI ／ 業務自動化 ／ AIエージェント</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== CONTENT ===== -->
+  <main class="content">
+
+    <!-- Summary -->
+    <section class="section">
+      <div class="section-title">要旨</div>
+      <p class="summary-text">
+        生成AI・LLM・ノーコードツールを活用し、企業の業務構造そのものを変革するAIコンサルタントです。<br>
+        「何を作るか」ではなく<strong>「現場に何をもたらすか」</strong>を起点に設計し、業務課題の特定から要件定義・システム実装・運用定着まで一気通貫でご支援します。<br>
+        人とAIの最適な役割分担を設計することで、<strong>品質を落とさずスピードと生産性を同時に引き上げる</strong>アプローチが強みです。
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <div class="section-title">スキル・ツール</div>
+      <div class="skills-grid">
+        <span class="skill-tag">n8n</span>
+        <span class="skill-tag">Dify</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Swift</span>
+        <span class="skill-tag">Claude Code</span>
+        <span class="skill-tag">OpenClaw</span>
+        <span class="skill-tag secondary">Google AI Studio</span>
+        <span class="skill-tag secondary">生成AI / LLM</span>
+        <span class="skill-tag secondary">プロンプト設計</span>
+        <span class="skill-tag secondary">Vercel</span>
+        <span class="skill-tag secondary">API連携</span>
+        <span class="skill-tag secondary">RPA</span>
+        <span class="skill-tag secondary">Googleスプレッドシート</span>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section">
+      <div class="section-title">実績</div>
+      <div class="section-note">
+        以下は支援実績の一部です。業種・規模を問わず、多様なクライアントのDX推進に携わっています。
+      </div>
+
+      <!-- ① 株式会社202 -->
+      <div class="achievement-card">
+        <div class="card-header">
+          <div class="card-header-top">
+            <div class="card-company">株式会社202 様</div>
+            <div class="card-category">RPO</div>
+          </div>
+        </div>
+        <div class="card-mission">
+          採用担当者を「毎月の作業者」から「戦略に集中できるプロ」へ変える仕組みを構築。
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-block-label">変革のアプローチ</div>
+            <div class="card-block-text">
+              社内に散在していた<strong>採用ノウハウをAIが参照できる構造に再編</strong>し、ナレッジを起点にデータ集計・分析・レポート作成まで一連の業務をAIが自律的に実行する仕組みを構築しました。<br><br>
+              担当者が毎月繰り返していた定型作業を仕組みに落とし込み、<strong>属人的な経験値をシステムへ移管</strong>しました。
+            </div>
+          </div>
+          <div>
+            <div class="card-block-label">主な自動化領域</div>
+            <div class="card-block-text">
+              ・採用データの自動集計・分析<br>
+              ・月次レポートの自動生成<br>
+              ・入社後面談シートの自動作成<br>
+              ・案件ナレッジのAI化・蓄積
+            </div>
+            <div style="margin-top:14px">
+              <div class="card-block-label">使用技術</div>
+              <div class="tools-list">
+                <span class="tool-badge">n8n</span>
+                <span class="tool-badge">各種API</span>
+                <span class="tool-badge">生成AI / LLM</span>
+                <span class="tool-badge">Googleスプレッドシート</span>
+                <span class="tool-badge">Vercel</span>
+                <span class="tool-badge">Zoom</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="effects">
+          <div class="effect-box quant">
+            <div class="effect-label">定量効果</div>
+            <div class="effect-number">月30時間以上削減</div>
+            <div class="effect-text">採用担当者の定例作業工数を大幅に圧縮</div>
+          </div>
+          <div class="effect-box qual">
+            <div class="effect-label">定性効果</div>
+            <div class="effect-headline">採用ノウハウが、組織の資産になる</div>
+            <div class="effect-text">
+              採用ノウハウが組織資産として蓄積され、使うほどAIの精度が上がる構造が生まれました。
+            </div>
+          </div>
+        </div>
+        <div class="screenshots">
+          <div class="screenshots-label">成果物スクリーンショット</div>
+          <div class="screenshots-grid cols-2">
+            <div class="screenshot-item fixed-h" onclick="openLightbox('imgs/202_form.png')">
+              <img src="imgs/202_form.png" alt="月次戦略レポート作成フォーム">
+              <div class="screenshot-caption">月次戦略レポート自動生成 — 入力フォーム</div>
+            </div>
+            <div class="screenshot-item fixed-h" onclick="openLightbox('imgs/202_report.png')">
+              <img src="imgs/202_report.png" alt="自動生成された定例レポート">
+              <div class="screenshot-caption">自動生成された定例レポート出力例</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ② 株式会社メディカルローグ -->
+      <div class="achievement-card">
+        <div class="card-header">
+          <div class="card-header-top">
+            <div class="card-company">株式会社メディカルローグ 様</div>
+            <div class="card-category">医療系アプリ開発</div>
+          </div>
+        </div>
+        <div class="card-mission">
+          議事録作成・アクション管理をゼロ工数化し、会議の価値を最大化。
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-block-label">変革のアプローチ</div>
+            <div class="card-block-text">
+              単なる文字起こしにとどまらず、<strong>社内情報をナレッジとしてAIに組み込み</strong>、「誰が・何を・いつまでに」を高精度で自動抽出できる仕組みを構築しました。<br><br>
+              Zoom・Slack・スプレッドシートなど<strong>現場がすでに使っているツールをそのまま連携先として採用</strong>し、現場側の操作変更なしで自動化を実現しました。
+            </div>
+          </div>
+          <div>
+            <div class="card-block-label">自動化フロー</div>
+            <div class="card-block-text">
+              Zoom録画・文字起こし<br>
+              → 社内ナレッジを参照したLLM処理<br>
+              → 議事録の自動生成<br>
+              → ネクストアクションの抽出・整理<br>
+              → 担当者へ自動送信
+            </div>
+            <div style="margin-top:14px">
+              <div class="card-block-label">使用技術</div>
+              <div class="tools-list">
+                <span class="tool-badge">Zoom</span>
+                <span class="tool-badge">n8n</span>
+                <span class="tool-badge">Webhook</span>
+                <span class="tool-badge">各種API連携</span>
+                <span class="tool-badge">Googleスプレッドシート</span>
+                <span class="tool-badge">Slack連携</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="effects">
+          <div class="effect-box quant">
+            <div class="effect-label">定量効果</div>
+            <div class="effect-number">月20時間以上削減</div>
+            <div class="effect-text">MTG後の議事録作成・アクション整理・送付業務をゼロ工数化</div>
+          </div>
+          <div class="effect-box qual">
+            <div class="effect-label">定性効果</div>
+            <div class="effect-headline">「言った・言わない」がゼロになる</div>
+            <div class="effect-text">
+              アクションが担当者へ自動配信されることで、チーム全体の情報共有精度と行動の一貫性が向上しました。
+            </div>
+          </div>
+        </div>
+        <div class="screenshots">
+          <div class="screenshots-label">成果物スクリーンショット</div>
+          <div class="screenshots-grid cols-1">
+            <div class="screenshot-item" onclick="openLightbox('imgs/medical_workflow.png')">
+              <img src="imgs/medical_workflow.png" alt="n8n自動化ワークフロー全体図">
+              <div class="screenshot-caption">n8n 自動化ワークフロー全体図 — Zoom録画→文字起こし→議事録生成→ネクストアクション抽出→Slack通知</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ③ 株式会社VOYAGE -->
+      <div class="achievement-card">
+        <div class="card-header">
+          <div class="card-header-top">
+            <div class="card-company">株式会社VOYAGE 様</div>
+            <div class="card-category">LINEマーケティング</div>
+          </div>
+        </div>
+        <div class="card-mission">
+          「担当者の感覚と経験」に依存していたマーケティング業務を、AIが支援する再現性ある体制へ。
+        </div>
+        <div class="card-body">
+          <div>
+            <div class="card-block-label">変革のアプローチ</div>
+            <div class="card-block-text">
+              広告制作・配信・クリエイティブ生成をまたぐ業務フロー全体を把握し、<strong>ツール間を連携した自動化ワークフローを構築</strong>。社長の判断軸・過去施策の知見をAIに学習させ、<strong>属人的だったマーケティング意思決定を仕組みとして再現</strong>できる体制に転換しました。
+            </div>
+          </div>
+          <div>
+            <div class="card-block-label">主な導入施策</div>
+            <div class="card-block-text">
+              ・広告配信の自動化ワークフロー構築<br>
+              ・社長の知見をAI化した「AI〇〇社長」開発<br>
+              ・OpenClaw を活用したオペレーション改善<br>
+              ・LINEバナー自動生成アプリ開発
+            </div>
+            <div style="margin-top:14px">
+              <div class="card-block-label">使用技術</div>
+              <div class="tools-list">
+                <span class="tool-badge">Google AI Studio</span>
+                <span class="tool-badge">n8n</span>
+                <span class="tool-badge">OpenClaw</span>
+                <span class="tool-badge">nanobanana</span>
+                <span class="tool-badge">生成AI / 画像生成</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="effects">
+          <div class="effect-box quant">
+            <div class="effect-label">定量効果</div>
+            <div class="effect-number">月100時間以上の業務を削減</div>
+            <div class="effect-text">広告制作・配信設定など手動工程を自動化し、制作リードタイムを大幅に短縮</div>
+          </div>
+          <div class="effect-box qual">
+            <div class="effect-label">定性効果</div>
+            <div class="effect-headline">「あの人がいないと回らない」から脱却</div>
+            <div class="effect-text">
+              誰が担当しても同水準の成果が出る体制が生まれ、意思決定の一貫性が向上しました。
+            </div>
+          </div>
+        </div>
+        <div class="screenshots">
+          <div class="screenshots-label">成果物スクリーンショット</div>
+          <div class="screenshots-grid cols-2">
+            <div class="screenshot-item fixed-h" onclick="openLightbox('imgs/voyage_1.png')">
+              <img src="imgs/voyage_1.png" alt="LINEバナー Master Pro 入力画面">
+              <div class="screenshot-caption">LINEバナー Master Pro — 案件情報・ターゲット入力</div>
+            </div>
+            <div class="screenshot-item fixed-h" onclick="openLightbox('imgs/広告自動化.png')">
+              <img src="imgs/広告自動化.png" alt="広告自動化ワークフロー">
+              <div class="screenshot-caption">広告配信自動化 — n8nワークフロー全体図</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Strengths -->
+    <section class="section">
+      <div class="section-title">強み</div>
+      <div class="strengths-grid">
+        <div class="strength-item">
+          <div class="strength-icon-wrap">🔍</div>
+          <div class="strength-title">現場を動かす<br>上流設計力</div>
+          <div class="strength-text">
+            支援前に業務フロー・担当者・情報の流れを丁寧にヒアリングし、ボトルネックと非効率の根本を特定。「どのツールを使うか」ではなく「何が変わればよいか」を起点に設計することで、導入後すぐに現場が動き出す仕組みを構築します。
+          </div>
+        </div>
+        <div class="strength-item">
+          <div class="strength-icon-wrap">⚙️</div>
+          <div class="strength-title">提案で終わらない<br>実装完結力</div>
+          <div class="strength-text">
+            コンサルティングから設計・実装・定着支援まで一人称で担います。「提案だけして終わり」にならず、動く仕組みとして現場に届けることにこだわります。
+          </div>
+        </div>
+        <div class="strength-item">
+          <div class="strength-icon-wrap">🤝</div>
+          <div class="strength-title">社員の負担ゼロで<br>変化を起こす導入設計</div>
+          <div class="strength-text">
+            既存ツール・習慣に合わせた設計で、現場の行動変容を最小化。「使ってもらえない仕組み」を作らないことを原則に、スムーズな定着と即効性を両立します。
+          </div>
+        </div>
+        <div class="strength-item">
+          <div class="strength-icon-wrap">📈</div>
+          <div class="strength-title">定量と定性、両面で<br>成果を設計する</div>
+          <div class="strength-text">
+            工数削減・コスト圧縮などの数値成果だけでなく、「担当者の意識が変わった」「属人化が解消された」など、組織に根づく変化まで設計してプロジェクトを推進します。
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    新谷 悠悟 ／ AIコンサルタント実績資料 ／ 2026年3月
+  </footer>
+
+</div>
+
+<script>
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('active');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.getElementById('lightbox-img').src = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+</body>
+</html>
