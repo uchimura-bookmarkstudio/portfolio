@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>内村尚城 | 就活ポートフォリオ</title>
-  <meta name="description" content="内村尚城の就職活動用ポートフォリオ。AI活用、業務自動化、営業戦略、業務設計の実績をまとめています。">
+  <title>内村尚城 | Portfolio</title>
+  <meta name="description" content="内村尚城のポートフォリオ。AIエージェント設計、業務自動化、AI BPaaS構築の実績。">
   <style>
     :root {
       --ink: #18212f;
@@ -139,11 +139,41 @@
       font-size: 15px;
     }
 
+    .hero-stats {
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .hero-stat {
+      padding: 14px 22px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 28px;
+      font-weight: 900;
+      line-height: 1.1;
+      color: #a9d9cc;
+    }
+
+    .hero-stat span {
+      display: block;
+      margin-top: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 30px;
+      margin-top: 24px;
     }
 
     .button {
@@ -611,6 +641,11 @@
       .metric-grid {
         grid-template-columns: 1fr;
       }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 12px;
+      }
     }
 
     .crop-right {
@@ -678,10 +713,15 @@
 
   <header class="hero" id="top">
     <div class="hero-inner">
-      <p class="eyebrow">Job Hunting Portfolio 2026</p>
+      <p class="eyebrow">Portfolio 2026</p>
       <h1>内村 尚城<br>Naoki Uchimura</h1>
-      <p class="hero-lead">AI活用・業務自動化・営業戦略を、現場で動く仕組みに落とし込む。</p>
-      <p class="hero-copy">構想だけで終わらせず、業務フローの分解、ツール選定、実装、運用ルール、提案資料化まで一気通貫で進めることを強みにしています。</p>
+      <p class="hero-lead">業務プロセスをAIで再設計し、<br>「人は判断だけ」の状態を作る。</p>
+      <p class="hero-copy">AIエージェント設計、業務自動化ワークフロー構築、AI BPaaS基盤の設計を一気通貫で実行します。</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>150h+</strong><span>月間業務削減</span></div>
+        <div class="hero-stat"><strong>12社</strong><span>AI導入支援</span></div>
+        <div class="hero-stat"><strong>80%</strong><span>AI自律実行率</span></div>
+      </div>
       <div class="hero-actions">
         <a class="button primary" href="#projects">実績を見る</a>
         <a class="button" href="mailto:naoki.uch0325@gmail.com">メールする</a>
@@ -697,33 +737,33 @@
             <p class="section-kicker">Summary</p>
             <h2>自己紹介</h2>
           </div>
-          <p class="section-desc">AIツールを触れるだけではなく、実際の業務・営業・意思決定の中に組み込む経験を積んできました。大きな組織でも小さなチームでも、曖昧な課題を構造化して前に進めます。</p>
+          <p class="section-desc">AIエージェント設計、業務自動化ワークフロー構築、AI BPaaS基盤の設計・実装・運用定着まで一気通貫で実行。在学中に12社のAI導入を推進し、累計月150時間以上の業務削減を実現しています。</p>
         </div>
 
         <div class="summary-grid">
           <div class="summary-panel">
-            <h3>人物像</h3>
-            <p>現場の困りごとを聞き、業務の流れに分解し、AI・n8n・Google Workspace・Slack・Notionなどを組み合わせて改善案と実装に落とし込むタイプです。営業・提案・資料作成も含め、事業側と技術側の間に立つ役割を得意としています。</p>
+            <h3>得意領域</h3>
+            <p>業務プロセスを分解し、AIが自律実行する部分と人が判断する部分を切り分けて再設計する。Orchestrator / Worker / Human-in-the-Loopの3層アーキテクチャでAIエージェントを構築し、n8n・Claude API・各種SaaS APIを統合して「人は承認だけ」の運用基盤を作ります。</p>
             <div class="metric-grid" aria-label="経験サマリー">
               <div class="metric">
-                <strong>AI</strong>
-                <span>生成AI活用 / エージェント設計</span>
+                <strong>Agent</strong>
+                <span>AIエージェント設計 / Orchestrator / RAG</span>
               </div>
               <div class="metric">
-                <strong>Ops</strong>
-                <span>業務自動化 / API連携</span>
+                <strong>Workflow</strong>
+                <span>n8n / API統合 / 業務自動化基盤</span>
               </div>
               <div class="metric">
-                <strong>Biz</strong>
-                <span>営業戦略 / 提案 / CSO補佐</span>
+                <strong>BPaaS</strong>
+                <span>業務プロセス再設計 / AI駆動型BPO</span>
               </div>
             </div>
           </div>
 
           <ul class="signal-list">
-            <li>AI導入を「何となく使う」から「毎日の業務で回る」状態へ設計する。</li>
-            <li>営業・採用・レポート・資料作成など、非エンジニア業務の自動化に強い。</li>
-            <li>過去の試行錯誤を、自己修正力と実務での行動量に変えてきた。</li>
+            <li>請求書処理・議事録作成・レポート生成など、作業の80%をAIに移管する設計を実行。</li>
+            <li>OpenClaw / Claude Codeを基盤にしたAIエージェントを複数構築・本番運用中。</li>
+            <li>ツール導入で終わらせず、業務フロー分解→AI設計→実装→運用定着まで一人で完結。</li>
           </ul>
         </div>
       </div>
@@ -736,24 +776,24 @@
             <p class="section-kicker">Strengths</p>
             <h2>強み</h2>
           </div>
-          <p class="section-desc">就職後に価値を出しやすい領域を、業務設計・実装・ビジネス推進の3つに整理しています。</p>
+          <p class="section-desc">AIエージェント設計・業務自動化・事業推進の3領域で価値を出します。</p>
         </div>
 
         <div class="strength-grid">
           <article class="strength">
             <div class="strength-mark" aria-hidden="true"></div>
-            <h3>業務を構造化する力</h3>
-            <p>ヒアリング内容を、入力・処理・判断・出力・例外対応に分け、どこを人が担い、どこをAIや自動化に任せるべきかを整理します。</p>
+            <h3>AIエージェント設計</h3>
+            <p>Orchestrator / Worker / HILの3層で業務を再構成。RAG設計（ハイブリッド検索・チャンク・メタデータ）からReflection Loopまで、エージェントの全レイヤーを設計・実装します。</p>
           </article>
           <article class="strength">
             <div class="strength-mark" aria-hidden="true"></div>
-            <h3>実装まで持っていく力</h3>
-            <p>n8n、GAS、API、Google Workspace、Slackなどを使い、提案で終わらず動くワークフローや社内ツールとして形にします。</p>
+            <h3>業務自動化ワークフロー</h3>
+            <p>n8n・Claude API・Google Workspace・Slack等を統合し、請求書処理・議事録・レポート生成・広告配信を全自動化。提案書ではなく、動く仕組みを納品します。</p>
           </article>
           <article class="strength">
             <div class="strength-mark" aria-hidden="true"></div>
-            <h3>事業目線で伝える力</h3>
-            <p>コスト削減、営業生産性、運用定着、意思決定の速さなど、経営・現場双方に伝わる言葉で資料化し、関係者を動かします。</p>
+            <h3>業務プロセス再設計</h3>
+            <p>属人化した業務フローを可視化・標準化し、AIが自律実行/人が判断のみの構造へ再設計。ツール導入ではなく、業務プロセスごと引き受けるAI BPaaSモデルを構築。</p>
           </article>
         </div>
       </div>
@@ -946,7 +986,7 @@
             <p class="section-kicker">Work Process</p>
             <h2>仕事の進め方</h2>
           </div>
-          <p class="section-desc">新しい職場でも再現できるよう、成果物より前の考え方も明示しています。</p>
+          <p class="section-desc">業務を聞く→分解する→AIで仕組み化する→運用に乗せる。この型を全案件で再現しています。</p>
         </div>
 
         <div class="timeline">
@@ -990,11 +1030,11 @@
       <div>
         <p class="eyebrow">Contact</p>
         <h2>内村 尚城 / Naoki Uchimura</h2>
-        <p>AI活用、業務自動化、営業・事業開発領域で、現場と実装の間に立つ役割を志望しています。</p>
+        <p>AIエージェント設計・業務自動化・AI BPaaS構築のご相談はこちらまで。</p>
       </div>
       <a class="contact-link" href="mailto:naoki.uch0325@gmail.com">naoki.uch0325@gmail.com</a>
     </div>
-    <div class="footer-note">Portfolio for job hunting. Last updated: 2026-05-25</div>
+    <div class="footer-note">Naoki Uchimura Portfolio. Last updated: 2026-05-27</div>
   </footer>
 </body>
 </html>
