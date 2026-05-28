@@ -720,7 +720,7 @@
       <div class="hero-stats">
         <div class="hero-stat"><strong>150h+</strong><span>月間業務削減</span></div>
         <div class="hero-stat"><strong>12社</strong><span>AI導入支援</span></div>
-        <div class="hero-stat"><strong>80%</strong><span>AI自律実行率</span></div>
+        <div class="hero-stat"><strong>80%</strong><span>定型業務の自動化率</span></div>
       </div>
       <div class="hero-actions">
         <a class="button primary" href="#projects">実績を見る</a>
@@ -743,19 +743,19 @@
         <div class="summary-grid">
           <div class="summary-panel">
             <h3>得意領域</h3>
-            <p>業務プロセスを分解し、AIが自律実行する部分と人が判断する部分を切り分けて再設計する。Orchestrator / Worker / Human-in-the-Loopの3層アーキテクチャでAIエージェントを構築し、n8n・Claude API・各種SaaS APIを統合して「人は承認だけ」の運用基盤を作ります。</p>
+            <p>業務プロセスを分解し、AIが自律実行する部分と人が判断する部分を切り分けて再設計する。Anthropic公式パターン（Orchestrator-Workers + Human-in-the-Loop）でAIエージェントを構築し、n8n・Claude API・各種SaaS APIを統合して「人は承認だけ」の運用基盤を作ります。</p>
             <div class="metric-grid" aria-label="経験サマリー">
               <div class="metric">
                 <strong>Agent</strong>
-                <span>AIエージェント設計 / Orchestrator / RAG</span>
+                <span>Orchestrator-Workers / RAG / Evaluator-Optimizer</span>
               </div>
               <div class="metric">
                 <strong>Workflow</strong>
-                <span>n8n / API統合 / 業務自動化基盤</span>
+                <span>n8n / API統合 / 業務自動化</span>
               </div>
               <div class="metric">
                 <strong>BPaaS</strong>
-                <span>業務プロセス再設計 / AI駆動型BPO</span>
+                <span>業務プロセス再設計 / AI BPaaS</span>
               </div>
             </div>
           </div>
@@ -783,7 +783,7 @@
           <article class="strength">
             <div class="strength-mark" aria-hidden="true"></div>
             <h3>AIエージェント設計</h3>
-            <p>Orchestrator / Worker / HILの3層で業務を再構成。RAG設計（ハイブリッド検索・チャンク・メタデータ）からReflection Loopまで、エージェントの全レイヤーを設計・実装します。</p>
+            <p>Orchestrator-Workers + Human-in-the-Loop で業務を再構成。RAG設計（BM25 + ベクトルのハイブリッド検索・チャンク戦略・メタデータ）から Evaluator-Optimizer ループまで、エージェントの全レイヤーを設計・実装します。</p>
           </article>
           <article class="strength">
             <div class="strength-mark" aria-hidden="true"></div>
@@ -871,7 +871,7 @@
                 <li>バナー制作の工数を1枚あたり数十分→数秒に短縮</li>
               </ul>
               <div class="tags">
-                <span class="tag">GPT Image</span>
+                <span class="tag">GPT-image-1</span>
                 <span class="tag">LINE広告</span>
                 <span class="tag">Next.js / Vercel</span>
                 <span class="tag">n8n</span>
@@ -888,17 +888,18 @@
               <h3>AIエージェント設計・業務プロセス自律化</h3>
               <p>業務プロセスを「丸ごとAIに引き受けさせる」設計を行っています。単体Workerの安定稼働から、Human-in-the-Loopによる品質担保、最終的にOrchestratorがタスク分解・振り分け・評価まで自律判断する3段階のアーキテクチャで構築。</p>
               <ul class="project-points">
-                <li>経営者の意思決定をRAG（ハイブリッド検索＋メタデータ設計）で再現する「AI社長」エージェントを構築。議事録・商談履歴・経営方針をナレッジ化し、社員がチャットで経営判断を即時確認可能に</li>
+                <li>議事録・商談履歴・経営方針をナレッジ化し、ハイブリッド検索（BM25 + ベクトル）+ メタデータ設計のRAGと経営方針プロンプトを組み合わせて「社長ならどう答えるか」を補助する『AI社長』エージェントを構築。社員がチャットで経営判断を即時確認可能に</li>
                 <li>請求書処理・議事録生成・レポート作成など、人が作業の80%を占めていた業務をAIが自律実行し、人は例外判断と最終承認のみに集中する構造へ再設計</li>
-                <li>Claude Code / OpenClawをエージェント基盤として採用し、Goal定義→Data/Memory設計→機能Agent実装→Orchestrator統合→Reflection Loopの設計順序で段階的に展開</li>
+                <li>Claude Agent SDK / Claude Code / OpenClaw を基盤に採用し、Goal定義 → Memory / Knowledge / Tool 設計 → 機能Agent実装 → Orchestrator-Workers 統合 → Evaluator-Optimizer ループの順序で段階的に展開</li>
               </ul>
               <div class="tags">
-                <span class="tag">OpenClaw</span>
+                <span class="tag">Claude Agent SDK</span>
                 <span class="tag">Claude Code</span>
+                <span class="tag">OpenClaw</span>
                 <span class="tag">Claude API</span>
                 <span class="tag">RAG</span>
                 <span class="tag">n8n</span>
-                <span class="tag">Orchestrator</span>
+                <span class="tag">Orchestrator-Workers</span>
               </div>
             </div>
           </article>
@@ -945,7 +946,7 @@
               <li>生成AI活用設計</li>
               <li>AIエージェント導入支援</li>
               <li>n8nワークフロー構築</li>
-              <li>GAS / API連携</li>
+              <li>Google Apps Script / 各種API連携</li>
             </ul>
           </div>
           <div class="skill-cell">
@@ -1018,7 +1019,7 @@
           <div class="narrative-copy">
             <p class="section-kicker">Narrative</p>
             <h2>AIを「使う」のではなく、業務プロセスごとAIで再設計するのが強みです。</h2>
-            <p>ツール導入で終わる支援はしません。業務フローを分解し、AIが自律実行できる部分と人が判断すべき部分を切り分け、Orchestrator設計で全体を統合する。作業の80%をAIに任せ、人は意思決定に集中できる状態を作るのが自分の仕事です。</p>
+            <p>ツール導入で終わる支援はしません。業務フローを分解し、AIが自律実行できる部分と人が判断すべき部分を切り分け、Orchestrator-Workers パターンで全体を統合する。作業の80%をAIに任せ、人は意思決定に集中できる状態を作るのが自分の仕事です。</p>
           </div>
         </div>
       </div>

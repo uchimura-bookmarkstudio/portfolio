@@ -89,15 +89,15 @@
   <text x="44" y="342" fill="#6366f1" font-size="10" font-weight="700">1</text>
   <text x="60" y="342" fill="#c8c8e0" font-size="11">Goal / Policy — 目的と方針の定義</text>
   <text x="44" y="362" fill="#6366f1" font-size="10" font-weight="700">2</text>
-  <text x="60" y="362" fill="#c8c8e0" font-size="11">Data / Memory — RAG・ナレッジ基盤構築</text>
+  <text x="60" y="362" fill="#c8c8e0" font-size="11">Memory / Knowledge — RAG・状態管理</text>
   <text x="44" y="382" fill="#6366f1" font-size="10" font-weight="700">3</text>
   <text x="60" y="382" fill="#c8c8e0" font-size="11">Functional Agent — 単機能エージェント実装</text>
   <text x="44" y="402" fill="#6366f1" font-size="10" font-weight="700">4</text>
-  <text x="60" y="402" fill="#c8c8e0" font-size="11">Orchestrator — 統合・判断・ルーティング</text>
+  <text x="60" y="402" fill="#c8c8e0" font-size="11">Orchestrator-Workers — 統合・判断・ルーティング</text>
   <text x="44" y="422" fill="#6366f1" font-size="10" font-weight="700">5</text>
   <text x="60" y="422" fill="#c8c8e0" font-size="11">Domain Skill + Tool接続 — 業務特化スキル</text>
   <text x="44" y="442" fill="#6366f1" font-size="10" font-weight="700">6</text>
-  <text x="60" y="442" fill="#c8c8e0" font-size="11">Reflection Loop — 自己修正・品質改善</text>
+  <text x="60" y="442" fill="#c8c8e0" font-size="11">Evaluator-Optimizer — 自己修正・品質改善</text>
 
   <!-- Right: Live system diagram -->
   <rect x="406" y="46" width="380" height="440" rx="8" fill="#1a1b30" stroke="#2d2e4a" stroke-width="1"/>
@@ -158,7 +158,7 @@
   <rect x="600" y="298" width="174" height="40" rx="6" fill="#262747" stroke="#d4a574" stroke-width="1.2"/>
   <text x="618" y="322" fill="#d4a574" font-size="16" font-weight="800">&gt;_</text>
   <text x="642" y="314" fill="#d4a574" font-size="11" font-weight="700">Claude Code</text>
-  <text x="642" y="328" fill="#8888aa" font-size="8">Anthropic CLI Agent</text>
+  <text x="642" y="328" fill="#8888aa" font-size="8">Anthropic Agent SDK / CLI</text>
 
   <!-- Tool row -->
   <rect x="420" y="348" width="108" height="32" rx="6" fill="#262747" stroke="#3d3e6a" stroke-width="1"/>
@@ -173,7 +173,7 @@
   <!-- RAG section -->
   <text x="422" y="402" fill="#a78bfa" font-size="10" font-weight="700" letter-spacing="1.5">RAG / KNOWLEDGE BASE</text>
   <rect x="420" y="410" width="354" height="64" rx="6" fill="#1e1f35" stroke="#2d2e4a" stroke-width="1"/>
-  <text x="436" y="430" fill="#c8c8e0" font-size="10">Hybrid Search: キーワード + セマンティック検索</text>
+  <text x="436" y="430" fill="#c8c8e0" font-size="10">Hybrid Search: BM25 (キーワード) + ベクトル (セマンティック)</text>
   <text x="436" y="446" fill="#c8c8e0" font-size="10">チャンク設計: 意味のある最小単位 + メタデータ付与</text>
   <text x="436" y="464" fill="#8888aa" font-size="9">議事録 / 契約書 / 業務マニュアル / 商談履歴 → ベクトルDB</text>
 </svg>
